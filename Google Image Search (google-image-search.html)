@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Google Image Search</title>
-    <style>
-      /* Google Image Search CSS */
-      .search-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 100px;
-      }
-
-      .search-bar {
-        width: 50%;
-        height: 50px;
-        border-radius: 25px;
-        text-align: center;
-        margin-bottom: 20px;
-      }
-
-      .search-button {
-        width: 150px;
-        height: 50px;
-        background-color: blue;
-        color: white;
+<head>
+	<title>Google Image Search</title>
+	<style>
+		body {
+			font-family: 'Poppins', sans-serif;
+			font-size: 1.07em;
+			text-align: center;
+		}
+		
+		.search-container {
+			display: inline-block;
+			margin-top: 50px;
+			text-align: left;
+		}
+		
+		input[type="text"] {
+			padding: 10px;
+			font-size: 1em;
+			border-radius: 5px;
+			border: 1px solid gray;
+			width: 60%;
+			margin-bottom: 20px;
+		}
+		
+		input[type="submit"] {
+			padding: 10px 20px;
+			background-color: blue;
+			color: white;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+		
+		a {
+			color: blue;
+			text-decoration: none;
+			margin-right: 20px;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<a href="index.html">Google Search</a>
+	
+	<div class="search-container">
+		<form action="https://www.google.com/search" method="get">
+			<input type="hidden" name="tbm" value="isch">
+			<input type="text" name="q" placeholder="Search Images">
+			<input type="submit" value="Search">
+		</form>
+	</div>
+</body>
+</html>
