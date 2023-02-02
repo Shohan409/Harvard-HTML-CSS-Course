@@ -2,55 +2,52 @@
 <html>
   <head>
     <style>
+      * {
+        font-family: 'Poppins', sans-serif;
+        font-size: 110%;
+      }
       form {
         display: flex;
         flex-direction: column;
-        align-items: left;
-        margin: 50px;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
       }
       input[type="text"] {
-        width: 50%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border-radius: 25px;
-        border: 1px solid gray;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: 1px solid lightgray;
+        text-align: left;
+      }
+      label {
+        margin-bottom: 10px;
       }
       input[type="submit"] {
-        width: 50%;
-        padding: 12px 20px;
-        margin: 8px 0;
-        box-sizing: border-box;
-        border-radius: 25px;
         background-color: blue;
         color: white;
+        padding: 10px 20px;
+        border-radius: 10px;
         border: none;
-      }
-      a {
-        float: right;
-        margin-right: 50px;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <a href="index.html">Google Search</a>
     <form action="https://www.google.com/search" method="get">
-      <input type="hidden" name="as_sitesearch" value="" />
-      <input type="hidden" name="as_oq" value="" />
-      <input type="hidden" name="as_eq" value="" />
-      <input type="hidden" name="as_filetype" value="" />
-      <input type="hidden" name="as_rights" value="" />
-      <input type="hidden" name="cr" value="countryUS" />
-      <input type="hidden" name="ei" value="" />
-      <label for="all_these_words">Find pages with... "all these words:"</label>
-      <input type="text" id="all_these_words" name="as_q" />
-      <label for="exact_word_phrase">Find pages with... "this exact word or phrase:"</label>
-      <input type="text" id="exact_word_phrase" name="as_epq" />
-      <label for="any_of_these_words">Find pages with... "any of these words:"</label>
-      <input type="text" id="any_of_these_words" name="as_oq" />
-      <label for="none_of_these_words">Find pages with... "none of these words:"</label>
-      <input type="text" id="none_of_these_words" name="as_eq" />
-      <input type="submit" value="Advanced Search" />
+      <a href="index.html">Google Search</a>
+      <a href="image.html">Google Image Search</a>
+      <h1>Google Advanced Search</h1>
+      <label for="allWords">Find pages with... "all these words":</label>
+      <input type="text" id="allWords" name="q">
+      <label for="exactPhrase">Find pages with... "this exact word or phrase":</label>
+      <input type="text" id="exactPhrase" name="as_epq">
+      <label for="anyWords">Find pages with... "any of these words":</label>
+      <input type="text" id="anyWords" name="as_oq">
+      <label for="noneWords">Find pages with... "none of these words":</label>
+      <input type="text" id="noneWords" name="as_eq">
+      <input type="submit" value="Advanced Search">
     </form>
   </body>
 </html>
